@@ -1,0 +1,121 @@
+---
+weight: 20
+title: QRL Legacy Protocol
+---
+
+# QRL Legacy Protocol
+
+
+## BKData
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| mrData | [MRData](#mrdata) |  |  |
+| block | [Block](#scalar-block) |  |  |
+
+## FBData
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| index | [uint64](#scalar-uint64) |  |  |
+
+## LegacyMessage
+
+Adding old code to refactor while keeping things working
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| func_name | [LegacyMessage.FuncName](#legacymessage.funcname) |  |  |
+| noData | [NoData](#nodata) |  |  |
+| veData | [VEData](#vedata) |  |  |
+| plData | [PLData](#pldata) |  |  |
+| pongData | [PONGData](#pongdata) |  |  |
+| mrData | [MRData](#mrdata) |  |  |
+| block | [Block](#scalar-block) |  |  |
+| fbData | [FBData](#fbdata) |  |  |
+| pbData | [PBData](#pbdata) |  |  |
+| bhData | [BlockHeightData](#blockheightdata) |  |  |
+| txData | [Transaction](#transaction) |  |  |
+| mtData | [Transaction](#transaction) |  |  |
+| tkData | [Transaction](#transaction) |  |  |
+| ttData | [Transaction](#transaction) |  |  |
+| ltData | [Transaction](#transaction) |  |  |
+| slData | [Transaction](#transaction) |  |  |
+| ephData | [EncryptedEphemeralMessage](#encryptedephemeralmessage) |  |  |
+| syncData | [SYNCData](#syncdata) |  |  |
+| chainStateData | [NodeChainState](#nodechainstate) |  |  |
+| nodeHeaderHash | [NodeHeaderHash](#nodeheaderhash) |  |  |
+| p2pAckData | [P2PAcknowledgement](#p2packnowledgement) |  |  |
+
+
+## MRData
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| hash | [bytes](#scalar-bytes) |  | FIXME: rename this to block_headerhash |
+| type | [LegacyMessage.FuncName](#legacymessage.funcname) |  | FIXME: type/string what is this |
+| stake_selector | [bytes](#scalar-bytes) |  |  |
+| block_number | [uint64](#scalar-uint64) |  |  |
+| prev_headerhash | [bytes](#scalar-bytes) |  |  |
+| reveal_hash | [bytes](#scalar-bytes) |  |  |
+
+
+## NoData
+
+<aside class="success">What did you expect, some data?</aside>
+
+## PBData
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| block | [Block](#scalar-block) |  |  |
+
+## PLData
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| peer_ips | [string](#scalar-string) | repeated |  |
+| public_port | [uint32](#scalar-uint32) |  |  |
+
+
+## PONGData
+
+## SYNCData
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| state | [string](#scalar-string) |  |  |
+
+## VEData
+
+| Field | Type | Label | Description |
+| ----- | ---- | ----- | ----------- |
+| version | [string](#scalar-string) |  |  |
+| genesis_prev_hash | [bytes](#scalar-bytes) |  |  |
+| rate_limit | [uint64](#scalar-uint64) |  |  |
+
+## LegacyMessage.FuncName
+
+| Name | Number | Description |
+| ---- | ------ | ----------- |
+| VE | 0 | Version |
+| PL | 1 | Peers List |
+| PONG | 2 | Pong TODO: Obsolete |
+| MR | 3 | Message received |
+| SFM | 4 | Send Full Message |
+| BK | 5 | Block |
+| FB | 6 | Fetch request for block |
+| PB | 7 | Push Block |
+| BH | 8 | Block Height |
+| TX | 9 | Transfer Transaction |
+| LT | 10 | Lattice Transaction |
+| EPH | 11 | Ephemeral |
+| MT | 12 | Message Transaction |
+| TK | 13 | Token Transaction |
+| TT | 14 | Transfer Token Transaction |
+| SL | 15 | Slave Transaction |
+| SYNC | 16 | Add into synced list, if the node replies |
+| CHAINSTATE | 17 | Chain State |
+| HEADERHASHES | 18 |  |
+| P2P_ACK | 19 | P2P Acknowledgement |
+

@@ -1,0 +1,15 @@
+[submodule "themes/docuapi"]
+	path = themes/docuapi
+	url = https://github.com/bep/docuapi.git
+[submodule "themes/slate"]
+	path = themes/slate
+	url = https://github.com/slatedocs/slate
+[submodule "themes/github.com/olivernn/lunr.js"]
+	path = themes/github.com/olivernn/lunr.js
+	url = https://github.com/olivernn/lunr.js
+[submodule "themes/github.com/jquery/jquery-dist"]
+	path = themes/github.com/jquery/jquery-dist
+	url = https://github.com/jquery/jquery-dist
+[submodule "themes/github.com/bep/empty-hugo-module"]
+	path = themes/github.com/bep/empty-hugo-module
+	url = https://github.com/bep/empty-hugo-module
